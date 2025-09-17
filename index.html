@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Pixel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- ================== BLOCO BÁSICO ================== -->
+<section class="card card-basic" id="tabela-basico">
+  <img src="https://achadinhos.nayarasilveira.com.br/assets/logo-shopee.png" alt="Achadinhos Narrados da Shopee" class="logo">
+  <h2>OFERTA BÁSICA</h2>
+  <p class="preco">R$ 10,00</p>
+  <a href="#checkout" class="btn-basic">ESCOLHER OFERTA BÁSICA</a>
+  <p>Acesso por 3 meses</p>
+  <ul class="beneficios">
+    <li><i class="fas fa-check"></i> + de 1000 vídeos virais por nicho</li>
+    <li><i class="fas fa-check"></i> Acesso por 3 meses ao grupo Vip</li>
+  </ul>
+  <p class="upgrade">Mas antes de escolher o básico, temos uma <b>OFERTA PREMIUM</b> muito mais vantajosa logo abaixo 👇</p>
+</section>
+
+<!-- ================== BLOCO PREMIUM ================== -->
+<section class="card card-premium" id="tabela-premium">
+  <div class="badge-mais-vendido"><i class="fas fa-fire"></i> Mais Vendido ⭐⭐</div>
+  <img src="https://achadinhos.nayarasilveira.com.br/assets/logo-shopee.png" alt="Achadinhos Narrados da Shopee" class="logo">
+  <h2>OFERTA PREMIUM</h2>
+  <p class="sub">Essa oferta termina em:</p>
+  <div class="timer">
+    <div class="time-box"><span id="minutos">15</span><small>MINUTOS</small></div>
+    <div class="time-box"><span id="segundos">00</span><small>SEGUNDOS</small></div>
+  </div>
+  <p class="preco"><span class="verde">6x de R$ 5,13</span><br> ou R$ 27,00 à vista</p>
+  <a href="#checkout" class="btn-premium">OK, VOCÊ ME CONVENCEU!</a>
+  <div class="barra">
+    <span style="width:30%"></span>
+  </div>
+  <p class="alerta">⚠️ Corra! Só tem 3 vagas na oferta!</p>
+  <ul class="beneficios">
+    <li><i class="fas fa-check-circle"></i> + de 1000 vídeos virais por nicho</li>
+    <li><i class="fas fa-check-circle"></i> Acesso vitalício</li>
+    <li><i class="fas fa-check-circle"></i> + de 200 vídeos narrados prontos</li>
+    <li><i class="fas fa-check-circle"></i> + de 100 figurinhas</li>
+    <li><i class="fas fa-check-circle"></i> Capas editáveis para compilados</li>
+    <li><i class="fas fa-check-circle"></i> Como gerar link de afiliada</li>
+    <li><i class="fas fa-check-circle"></i> Legendas prontas para vender</li>
+    <li><i class="fas fa-check-circle"></i> E-book desafio faça sua 1ª venda</li>
+    <li><i class="fas fa-check-circle"></i> Lista secreta de fornecedores</li>
+  </ul>
+</section>
+
+<!-- ================== BLOCO INTERMEDIÁRIO ================== -->
+<section class="bloco-img">
+  <img src="https://achadinhos.nayarasilveira.com.br/assets/bloco-dez.png" alt="Bloco Dez" class="full-img">
+</section>
+
+<!-- ================== FAQ ================== -->
+<section class="faq">
+  <h2>PERGUNTAS FREQUENTES</h2>
+  <p>Confira as respostas para as principais dúvidas sobre os Vídeos Narrados da Shopee:</p>
+  
+  <div class="faq-item">
+    <button>Sou iniciante, vou conseguir usar os vídeos? <i class="fas fa-plus"></i></button>
+    <div class="faq-content">Sim! Os vídeos narrados são totalmente prontos. Basta baixar, postar e começar a vender, mesmo que você nunca tenha vendido antes.</div>
+  </div>
+  <div class="faq-item">
+    <button>Com que frequência vou receber novos vídeos? <i class="fas fa-plus"></i></button>
+    <div class="faq-content">Você receberá novos vídeos narrados todos os dias para manter seu perfil sempre atualizado.</div>
+  </div>
+  <div class="faq-item">
+    <button>Preciso editar ou narrar os vídeos? <i class="fas fa-plus"></i></button>
+    <div class="faq-content">Não! Os vídeos já vêm narrados e prontos para postagem. Você só precisa baixar e publicar.</div>
+  </div>
+  <div class="faq-item">
+    <button>Os vídeos realmente ajudam a vender? <i class="fas fa-plus"></i></button>
+    <div class="faq-content">Sim! São testados e narrados com estratégias de conversão para gerar mais cliques e vendas diariamente.</div>
+  </div>
+  <div class="faq-item">
+    <button>Posso usar os vídeos em qualquer conta? <i class="fas fa-plus"></i></button>
+    <div class="faq-content">Sim! Pode postar em qualquer conta de afiliado Shopee, pessoal ou temática.</div>
+  </div>
+  <div class="faq-item">
+    <button>Por quanto tempo vou ter acesso aos vídeos? <i class="fas fa-plus"></i></button>
+    <div class="faq-content">O acesso é vitalício para o plano Premium.</div>
+  </div>
+</section>
+
+<!-- ================== BOTÃO FINAL ================== -->
+<div class="cta-final">
+  <a href="#tabela-premium" class="btn-final">QUERO GARANTIR MEU ACESSO</a>
+</div>
+
+
+<!-- ================== CSS ================== -->
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+section {
+  margin: 20px auto;
+  width: 95%;
+  max-width: 420px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.card-basic { background: #f8f8f8; }
+.card-basic .btn-basic {
+  display: block;
+  background: #ff6600;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.card-premium { border: 2px solid #00aa00; position: relative; }
+.card-premium .badge-mais-vendido {
+  position: absolute;
+  top: -15px; left: 50%;
+  transform: translateX(-50%);
+  background: #ff6600;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.card-premium .btn-premium {
+  display: block;
+  background: #28a745;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.card .preco { font-size: 1.4em; margin: 10px 0; }
+.card .preco .verde { font-size: 1.6em; color: #28a745; font-weight: bold; }
+ul.beneficios {
+  text-align: left;
+  padding: 0;
+  margin: 15px 0;
+}
+ul.beneficios li {
+  list-style: none;
+  margin: 8px 0;
+}
+ul.beneficios li i { color: #28a745; margin-right: 6px; }
+.barra {
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 12px;
+  margin: 10px 0;
+}
+.barra span {
+  display: block;
+  background: red;
+  height: 100%;
+}
+.alerta { color: red; font-weight: bold; }
+.faq h2 { text-align: center; margin-bottom: 10px; }
+.faq-item { border: 1px solid #ddd; border-radius: 8px; margin: 10px 0; }
+.faq-item button {
+  background: #f8f8f8;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+.faq-content {
+  display: none;
+  padding: 10px;
+  background: #fff;
+}
+.cta-final {
+  text-align: center;
+  margin: 30px 0;
+}
+.btn-final {
+  display: inline-block;
+  background: #28a745;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.full-img { width: 100%; border-radius: 12px; }
+</style>
+
+<!-- ================== JS FAQ e Timer ================== -->
+<script>
+document.querySelectorAll('.faq-item button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+// Timer regressivo 15:00 que reinicia
+let minutos = 15;
+let segundos = 0;
+function startTimer() {
+  const minEl = document.getElementById('minutos');
+  const segEl = document.getElementById('segundos');
+  setInterval(() => {
+    if (segundos === 0) {
+      if (minutos === 0) {
+        minutos = 15;
+        segundos = 0;
+      } else {
+        minutos--;
+        segundos = 59;
+      }
+    } else {
+      segundos--;
+    }
+    minEl.textContent = minutos.toString().padStart(2, '0');
+    segEl.textContent = segundos.toString().padStart(2, '0');
+  }, 1000);
+}
+startTimer();
+</script>
+</body>
+</html>
