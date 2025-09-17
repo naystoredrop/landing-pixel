@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing com Pixel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      padding: 14px 24px;
+      margin: 20px auto;
+      border-radius: 8px;
+      text-decoration: none;
+      width: 90%;
+      max-width: 360px;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #e65c00;
+    }
+
+    /* Barra de aviso */
+    .bar-notice {
+      width: 100%;
+      text-align: center;
+      background: #ff6600;
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de aviso -->
+  <div class="bar-notice">
+    Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 10,00</b>
+  </div>
+
+  <!-- Bloco arte principal -->
+  <img src="arte-canva.png" alt="Design do Canva">
+
+  <!-- Botão principal -->
+  <a href="#tabela-preco-final" class="cta-button">
+    QUERO GANHAR 5 MIL POR MÊS
+  </a>
+
+  <!-- Bloco zero -->
+  <img src="bloco-zero.png" alt="Bloco Zero">
+
+  <!-- Bloco um -->
+  <img src="bloco-um.png" alt="Bloco Um">
+
+  <!-- Bloco dois -->
+  <img src="bloco-dois.png" alt="Bloco Dois">
+
+  <!-- Bloco três -->
+  <img src="bloco-tres.png" alt="Bloco Três">
+
+  <!-- Bloco quatro -->
+  <img src="bloco-quatro.png" alt="Bloco Quatro">
+
+  <!-- Botão final -->
+  <a href="#tabela-preco-final" class="cta-button">
+    QUERO COPIAR, COLAR E VENDER!
+  </a>
+
+  <!-- Ancora para a tabela de preços -->
+  <div id="tabela-preco-final" style="margin:80px 0; text-align:center;">
+    <h2>🚀 Em breve sua tabela de preços aqui 🚀</h2>
+  </div>
+
+  <!-- Script da barra de aviso -->
+  <script>
+    function getDatas() {
+      var data = new Date();
+      var dias = [];
+      var mesAtual = data.toLocaleString('pt-BR', { month: 'long' });
+
+      for (var i = 2; i >= 0; i--) {
+        var novaData = new Date();
+        novaData.setDate(data.getDate() - i);
+
+        var dia = novaData.getDate();
+        dias.push(dia);
+      }
+
+      return dias.join(', ') + ' de ' + mesAtual;
+    }
+    document.getElementById("datas").textContent = getDatas();
+  </script>
+
+</body>
+</html>
