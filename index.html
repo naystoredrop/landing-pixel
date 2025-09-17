@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Achadinhos Narrados da Shopee</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wofZf1e1o0m8zQZtK6sM1mH2rG8a+Kk0N7Ww9mH7zG4lN7nVxJ1Oe3V3b0H2qPqQ0d8M8uQk3vQwYtYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --black:#000;
+      --white:#fff;
+      --text:#333;
+      --shopee:#ff6600;
+      --premium:#28a745;
+      --shadow:0 4px 10px rgba(0,0,0,.15);
+      --radius:12px;
+      --gap:18px;
+      --container:720px;
+    }
+
+    html,body{margin:0;padding:0;background:var(--black);color:var(--text);font-family:Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%;}
+    img{max-width:100%;height:auto;display:block}
+
+    /* Top promo bar */
+    .promo{
+      position:sticky;top:0;z-index:99;
+      background:var(--shopee);color:#fff;text-align:center;
+      padding:10px 12px;font-weight:700;font-size:16px;
+    }
+    .promo b{white-space:nowrap}
+
+    /* Generic container */
+    .wrap{max-width:var(--container);margin:0 auto;padding:18px 14px}
+
+    /* Blocks area - no gaps */
+    .bloco{width:100%;line-height:0;margin:0;padding:0}
+
+    /* Tables (cards) */
+    .tabelas{display:flex;flex-direction:column;gap:var(--gap)}
+    .card{
+      background:#fff;border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:22px;text-align:center;
+      position:relative;
+    }
+    .card-basic{border:2px solid var(--shopee)}
+    .card-premium{border:2px solid var(--premium)}
+
+    .logo-in-card{width:160px;margin:0 auto 6px}
+
+    .price{font-size:40px;font-weight:900;color:var(--premium);margin:6px 0 2px}
+    .subtitle{margin:0;color:#000}
+    .list{list-style:none;margin:14px 0 0 0;padding:0;text-align:left;color:#000}
+    .list li{padding:10px 0;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px}
+    .list i{color:var(--premium)}
+
+    .btn{
+      display:block;width:100%;padding:14px 18px;background:#111;color:#fff;
+      border:none;border-radius:8px;font-weight:700;cursor:pointer;text-decoration:none;
+      margin:16px auto 6px;letter-spacing:.2px;
+    }
+    .btn-basic{background:var(--shopee)}
+    .btn-premium{background:var(--premium)}
+    .btn-final{background:var(--shopee)}
+    .btn:hover{opacity:.9}
+
+    /* Mais vendido badge */
+    .badge{
+      position:absolute;right:12px;top:-12px;background:#ff3b30;color:#fff;
+      padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px;
+      box-shadow:var(--shadow)
+    }
+
+    /* Timer */
+    .timer{display:flex;justify-content:center;gap:10px;margin:10px 0 4px}
+    .timer div{
+      background:var(--shopee);color:#fff;font-size:28px;font-weight:900;
+      padding:8px 12px;border-radius:10px;min-width:58px;text-align:center;
+    }
+    .timer-label{display:flex;justify-content:center;gap:44px;font-size:12px;margin-top:4px;color:#666}
+
+    /* Progress bar */
+    .progress{height:10px;background:#eee;border-radius:8px;overflow:hidden;margin:12px 0}
+    .progress > span{display:block;height:100%;width:32%;background:red}
+
+    /* FAQ */
+    .faq h2{color:#fff;text-align:center}
+    details{background:#fff;border-radius:10px;margin:10px 0;padding:0;border:1px solid #ddd;overflow:hidden}
+    summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:700;color:#000;display:flex;justify-content:space-between;align-items:center}
+    summary::marker, summary::-webkit-details-marker{display:none}
+    details p{padding:0 18px 16px 18px;margin:0;color:#000}
+    .faq .hint{text-align:center;color:#aaa;margin-top:6px}
+
+    /* Footer */
+    footer{color:#bbb;text-align:center;padding:26px 16px}
+    footer a{color:#bbb;text-decoration:none;border-bottom:1px dashed #555}
+    .seal{width:160px;margin:10px auto 0;opacity:.95}
+
+    /* Responsive */
+    @media (min-width:768px){
+      .wrap{padding:24px 18px}
+      .tabelas{gap:22px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de aviso -->
+  <div class="promo">
+    Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 10,00</b>
+  </div>
+
+  <main class="wrap">
+
+    <!-- Bloco inicial (arte-canva) -->
+    <img src="arte-canva.png" alt="Arte Canva" class="bloco">
+
+    <!-- CTA 3 -->
+    <a href="#tabela-premium" class="btn btn-basic">QUERO GANHAR 5 MIL POR MÊS</a>
+
+    <!-- Bloco zero -->
+    <img src="bloco-zero.png" alt="Bloco Zero" class="bloco">
+
+    <!-- Sequência de blocos 1 a 10 (um por linha, sem espaçamento) -->
+    <img src="bloco-um.png" alt="Bloco Um" class="bloco">
+    <img src="bloco-dois.png" alt="Bloco Dois" class="bloco">
+    <img src="bloco-tres.png" alt="Bloco Três" class="bloco">
+    <img src="bloco-quatro.png" alt="Bloco Quatro" class="bloco">
+    <img src="bloco-cinco.png" alt="Bloco Cinco" class="bloco">
+    <img src="bloco-seis.png" alt="Bloco Seis" class="bloco">
+    <img src="bloco-sete.png" alt="Bloco Sete" class="bloco">
+    <img src="bloco-oito.png" alt="Bloco Oito" class="bloco">
+    <img src="bloco-nove.png" alt="Bloco Nove" class="bloco">
+    <img src="bloco-dez.png" alt="Bloco Dez" class="bloco">
+
+    <!-- CTA 6 -->
+    <a href="#tabela-premium" class="btn btn-basic">QUERO COPIAR, COLAR E VENDER!</a>
+
+    <!-- Tabelas de preço -->
+    <section class="tabelas" id="tabelas">
+
+      <!-- Oferta Básica -->
+      <div class="card card-basic" id="tabela-basica">
+        <img src="logo-basica.png" alt="Logo Básica" class="logo-in-card">
+        <h2 style="margin:6px 0 0 0;color:#000">Oferta Básica</h2>
+        <p class="subtitle"><strong>R$ 10,00</strong></p>
+
+        <a href="https://pagamento.acheinavovo.com.br/ckt/NeAeBD" class="btn btn-basic">ESCOLHER OFERTA BÁSICA</a>
+
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i> Acesso por 3 meses</li>
+          <li><i class="fa-solid fa-check"></i> + de 1000 vídeos virais por nicho</li>
+          <li><i class="fa-solid fa-check"></i> Acesso por 3 meses ao grupo Vip</li>
+        </ul>
+
+        <p style="margin:14px 0 0 0;color:#000">
+          Mas antes de escolher o básico, temos uma <b>OFERTA PREMIUM</b> muito mais vantajosa logo abaixo 👇
+        </p>
+      </div>
+
+      <!-- Oferta Premium -->
+      <div class="card card-premium" id="tabela-premium">
+        <div class="badge"><i class="fa-solid fa-fire"></i> Mais Vendido ⭐</div>
+        <img src="logo-premium.png" alt="Logo Premium" class="logo-in-card">
+        <h2 style="margin:6px 0 0 0;color:#000">Oferta Premium</h2>
+
+        <div class="timer">
+          <div id="minutos">15</div>
+          <div id="segundos">00</div>
+        </div>
+        <div class="timer-label"><span>MINUTOS</span><span>SEGUNDOS</span></div>
+
+        <p class="subtitle">6x de <span class="price" style="font-size:32px">R$ 5,13</span><br>
+        ou <b>R$ 27,00</b> à vista</p>
+
+        <a href="https://pagamento.acheinavovo.com.br/ckt/qPzPOd" class="btn btn-premium">OK, VOCÊ ME CONVENCEU!</a>
+
+        <p class="subtitle" style="margin-top:8px">PAGAMENTO ÚNICO</p>
+        <div class="progress"><span></span></div>
+        <p style="color:#d00;margin:0 0 12px 0;font-weight:700">Corra! Só tem 3 vagas na oferta!</p>
+
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i> + de 1000 vídeos virais por nicho</li>
+          <li><i class="fa-solid fa-check"></i> Acesso vitalício</li>
+          <li><i class="fa-solid fa-check"></i> + de 200 vídeos narrados prontos</li>
+          <li><i class="fa-solid fa-check"></i> + de 100 figurinhas</li>
+          <li><i class="fa-solid fa-check"></i> Capas editáveis para compilados</li>
+          <li><i class="fa-solid fa-check"></i> Como gerar link de afiliada</li>
+          <li><i class="fa-solid fa-check"></i> Como fazer o cadastro do zero</li>
+          <li><i class="fa-solid fa-check"></i> Legendas prontas para vender</li>
+          <li><i class="fa-solid fa-check"></i> E-book desafio faça sua 1ª venda</li>
+          <li><i class="fa-solid fa-check"></i> Lista secreta de fornecedores</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">PERGUNTAS FREQUENTES</h2>
+
+      <details>
+        <summary>Sou iniciante, vou conseguir usar os vídeos? <i class="fa-solid fa-minus"></i></summary>
+        <p>Sim! Os vídeos narrados são totalmente prontos. Basta baixar, postar e começar a vender, mesmo que você nunca tenha vendido antes.</p>
+      </details>
+
+      <details>
+        <summary>Com que frequência vou receber novos vídeos? <i class="fa-solid fa-plus"></i></summary>
+        <p>Você receberá novos vídeos narrados todos os dias para manter seu perfil sempre atualizado e atrativo para vendas.</p>
+      </details>
+
+      <details>
+        <summary>Preciso editar ou narrar os vídeos? <i class="fa-solid fa-plus"></i></summary>
+        <p>Não! Os vídeos já vêm narrados e prontos para postagem. Você só precisa baixar e publicar.</p>
+      </details>
+
+      <details>
+        <summary>Os vídeos realmente ajudam a vender? <i class="fa-solid fa-plus"></i></summary>
+        <p>Sim! Os vídeos são testados e narrados com estratégias de conversão para gerar mais cliques e vendas diariamente.</p>
+      </details>
+
+      <details>
+        <summary>Posso usar os vídeos em qualquer conta? <i class="fa-solid fa-plus"></i></summary>
+        <p>Sim! Você pode postar os vídeos em qualquer conta de afiliado Shopee, seja no seu perfil pessoal ou em páginas temáticas.</p>
+      </details>
+
+      <details>
+        <summary>Por quanto tempo vou ter acesso aos vídeos? <i class="fa-solid fa-plus"></i></summary>
+        <p>O acesso é vitalício no plano Premium.</p>
+      </details>
+
+      <div style="margin-top:18px">
+        <a href="https://pagamento.acheinavovo.com.br/ckt/qPzPOd" class="btn btn-final">QUERO GARANTIR MEU ACESSO</a>
+      </div>
+    </section>
+
+    <!-- Bloco final (onze) -->
+    <img src="bloco-onze.png" alt="Bloco Onze" class="bloco">
+
+  </main>
+
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Shield_icon_green.svg" class="seal" alt="Site Blindado" />
+    <p style="max-width:720px;margin:10px auto 0">
+      Aviso Legal: Nenhuma informação contida neste produto deve ser interpretada como uma afirmação de obtenção de resultados.
+      Qualquer referência ao desempenho passado ou potencial não é, e não deve ser interpretada como recomendação ou garantia.
+    </p>
+    <p style="margin-top:10px">Achadinhos Narrados da Shopee 2025 © — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Barra de datas (3 dias corridos: anteontem, ontem, hoje)
+    function getDatas() {
+      const data = new Date();
+      const dias = [];
+      const mes = data.toLocaleString('pt-BR', { month: 'long' });
+      for (let i=2;i>=0;i--){
+        const d = new Date();
+        d.setDate(data.getDate()-i);
+        dias.push(d.getDate());
+      }
+      return dias.join(', ') + ' de ' + mes;
+    }
+    document.getElementById('datas').textContent = getDatas();
+
+    // Timer 15:00 que reinicia ao zerar
+    let minutos = 15;
+    let segundos = 0;
+    const m = document.getElementById('minutos');
+    const s = document.getElementById('segundos');
+
+    function tick(){
+      if(minutos===0 && segundos===0){
+        minutos = 15; segundos = 0;
+      }else{
+        if(segundos===0){ minutos--; segundos = 59; } else { segundos--; }
+      }
+      m.textContent = String(minutos).padStart(2,'0');
+      s.textContent = String(segundos).padStart(2,'0');
+    }
+    setInterval(tick,1000);
+    tick();
+  </script>
+</body>
+</html>
