@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Achadinhos Narrados da Shopee</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Barra aviso */
+    #displayDate3 {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      background: #ff6600;
+      padding: 10px;
+    }
+
+    /* Cards */
+    .card {
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card-basic {
+      border: 2px solid #ccc;
+    }
+
+    .card-premium {
+      border: 2px solid #00cc00;
+      position: relative;
+    }
+
+    /* Selo mais vendido */
+    .selo {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff6600;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Botões */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-orange { background: #ff6600; color: #fff; }
+    .btn-green { background: #28a745; color: #fff; }
+    .btn-dark { background: #111; color: #fff; }
+
+    /* Lista benefícios */
+    .beneficios {
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .beneficios li {
+      list-style: none;
+      margin: 8px 0;
+    }
+
+    .beneficios li i {
+      color: #28a745;
+      margin-right: 8px;
+    }
+
+    /* Timer */
+    .timer {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff6600;
+      margin: 10px 0;
+    }
+
+    /* FAQ */
+    .faq {
+      width: 90%;
+      max-width: 500px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .faq h2 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 15px;
+      cursor: pointer;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      margin: 0;
+      color: #333;
+    }
+
+    .faq-item.open h3 {
+      color: #ff6600;
+    }
+
+    .faq-item p {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .faq-item.open p {
+      display: block;
+    }
+
+    /* Botão final */
+    .final-cta {
+      width: 90%;
+      max-width: 400px;
+      margin: 30px auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Barra de aviso -->
+  <div id="displayDate3">
+    Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 10,00</b>
+  </div>
+
+  <!-- Oferta Básica -->
+  <div class="card card-basic">
+    <img src="logo.png" alt="Achadinhos Narrados da Shopee">
+    <h2>OFERTA BÁSICA</h2>
+    <p><b>R$ 10,00</b></p>
+    <button class="btn btn-orange" onclick="location.href='#tabela-preco-final'">ESCOLHER OFERTA BÁSICA</button>
+    <p>Acesso por 3 meses</p>
+    <ul class="beneficios">
+      <li><i class="fa-solid fa-check"></i> + de 1000 vídeos virais por nicho</li>
+      <li><i class="fa-solid fa-check"></i> Acesso por 3 meses ao grupo Vip</li>
+    </ul>
+    <p>Mas antes de escolher o básico, temos uma <b>OFERTA PREMIUM</b> muito mais vantajosa logo abaixo 👇</p>
+  </div>
+
+  <!-- Oferta Premium -->
+  <div id="tabela-preco-final" class="card card-premium">
+    <div class="selo"><i class="fa-solid fa-fire"></i> Mais Vendido ⭐⭐</div>
+    <img src="logo.png" alt="Achadinhos Narrados da Shopee">
+    <h2>OFERTA PREMIUM</h2>
+    <p>Essa oferta termina em:</p>
+    <div class="timer" id="timer">15:00</div>
+    <p>6x de <b style="color:#28a745;">R$ 5,13</b><br>ou R$ 27,00 à vista</p>
+    <button class="btn btn-green">OK, VOCÊ ME CONVENCEU!</button>
+    <p><small>PAGAMENTO ÚNICO</small></p>
+    <div style="background:#ddd; height:10px; border-radius:5px; margin:10px 0;">
+      <div style="background:red; width:30%; height:100%; border-radius:5px;"></div>
+    </div>
+    <p style="color:red; font-weight:bold;">Corra! Só tem 3 vagas na oferta!</p>
+    <ul class="beneficios">
+      <li><i class="fa-solid fa-check"></i> + de 1000 vídeos virais por nicho</li>
+      <li><i class="fa-solid fa-check"></i> Acesso vitalício</li>
+      <li><i class="fa-solid fa-check"></i> + de 200 vídeos narrados prontos</li>
+      <li><i class="fa-solid fa-check"></i> + de 100 figurinhas</li>
+      <li><i class="fa-solid fa-check"></i> Capas editáveis para compilados</li>
+      <li><i class="fa-solid fa-check"></i> Como gerar link de afiliada</li>
+      <li><i class="fa-solid fa-check"></i> Como fazer o cadastro do zero</li>
+      <li><i class="fa-solid fa-check"></i> Legendas prontas para vender</li>
+      <li><i class="fa-solid fa-check"></i> E-book desafio faça sua 1ª venda</li>
+      <li><i class="fa-solid fa-check"></i> Lista secreta de fornecedores</li>
+    </ul>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <h2>PERGUNTAS FREQUENTES</h2>
+
+    <div class="faq-item">
+      <h3>Sou iniciante, vou conseguir usar os vídeos?</h3>
+      <p>Sim! Os vídeos narrados são totalmente prontos. Basta baixar, postar e começar a vender.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Com que frequência vou receber novos vídeos?</h3>
+      <p>Você receberá novos vídeos narrados todos os dias para manter seu perfil atualizado.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Preciso editar ou narrar os vídeos?</h3>
+      <p>Não! Eles já vêm narrados e prontos para postar. Só baixar e publicar.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Os vídeos realmente ajudam a vender?</h3>
+      <p>Sim! São testados e narrados com estratégias para gerar cliques e vendas diariamente.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Posso usar os vídeos em qualquer conta?</h3>
+      <p>Sim! Pode postar em conta pessoal ou páginas temáticas da Shopee.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Por quanto tempo vou ter acesso aos vídeos?</h3>
+      <p>O acesso é vitalício na oferta premium, basta garantir sua vaga agora.</p>
+    </div>
+  </div>
+
+  <!-- Botão final -->
+  <div class="final-cta">
+    <button class="btn btn-dark" onclick="location.href='#tabela-preco-final'">
+      QUERO GARANTIR MEU ACESSO
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Datas dinâmicas
+    function getDatas() {
+      var data = new Date();
+      var dias = [];
+      var mesAtual = data.toLocaleString('pt-BR', { month: 'long' });
+      for (var i = 2; i >= 0; i--) {
+        var novaData = new Date();
+        novaData.setDate(data.getDate() - i);
+        dias.push(novaData.getDate());
+      }
+      return dias.join(', ') + ' de ' + mesAtual;
+    }
+    document.getElementById("datas").textContent = getDatas();
+
+    // Timer regressivo
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration; // reinicia quando chega a 0
+        }
+      }, 1000);
+    }
+    window.onload = function () {
+      var fifteenMinutes = 60 * 15,
+          display = document.getElementById("timer");
+      startTimer(fifteenMinutes, display);
+    };
+
+    // FAQ toggle
+    document.querySelectorAll(".faq-item").forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
