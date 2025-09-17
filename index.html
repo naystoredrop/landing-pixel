@@ -116,10 +116,33 @@
   </style>
 </head>
 <body>
-  <!-- Barra de aviso -->
-  <div class="promo" id="promoBar">
-    Somente nos dias: <strong>15, 16, 17 de setembro</strong> você vai pagar apenas <strong>R$ 10,00</strong>
+<div id="e_1313492_1_173967184567b149259e736439016908" class="gpc-e e_html dd dm">
+  <div class="c e_html">
+    <div id="displayDate3" style="color:#fff; font-size: 16px; text-align: center; background: #ff6600; padding: 10px;">
+      Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 10,00</b>
+    </div>
   </div>
+</div>
+
+<script>
+  function getDatas() {
+    var data = new Date();
+    var dias = [];
+    var mesAtual = data.toLocaleString('pt-BR', { month: 'long' });
+
+    for (var i = 2; i >= 0; i--) {
+      var novaData = new Date();
+      novaData.setDate(data.getDate() - i);
+
+      var dia = novaData.getDate();
+      dias.push(dia);
+    }
+
+    return dias.join(', ') + ' de ' + mesAtual;
+  }
+
+  document.getElementById("datas").textContent = getDatas();
+</script>
   <div class="spacer" aria-hidden="true"></div>
 
   <main class="wrap">
