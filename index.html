@@ -225,5 +225,61 @@
     <div class="spacer"></div>
   </main>
 
+  <!-- UTM propagation to Cartpanda (achadinhos) -->
+<!-- Cole este bloco imediatamente antes de </body> na sua landing. -->
+<script>
+(function () {
+  // UTMs padrão se o visitante chegar sem utm_* na URL
+  var DEFAULT_UTM = {
+    utm_source: 'facebook',
+    utm_medium: 'cpc',
+    utm_campaign: 'achadinhos'
+  };
+
+  // Lê UTMs da URL atual
+  var incoming = new URLSearchParams(window.location.search);
+  Object.entries(DEFAULT_UTM).forEach(function ([k, v]) {
+    if (!incoming.has(k)) incoming.set(k, v);
+  });
+
+  // Verifica se o link é do seu checkout Cartpanda
+  function isCheckout(urlOrHref) {
+    try {
+      var u = new URL(urlOrHref, window.location.origin);
+      return /(^|\.)pagamento\.acheinavovo\.com\.br$/i.test(u.hostname);
+    } catch (e) { return false; }
+  }
+
+  // Mescla UTMs no link (preserva params existentes)
+  function patchLink(a) {
+    try {
+      var url = new URL(a.href, window.location.origin);
+      if (!isCheckout(url)) return;
+      incoming.forEach(function (v, k) {
+        if (!url.searchParams.has(k)) url.searchParams.set(k, v);
+      });
+      a.href = url.toString();
+    } catch (e) {}
+  }
+
+  // Aplica agora e em elementos que surgirem depois
+  function apply() {
+    document.querySelectorAll('a.offer, a.cta, a[href*="pagamento.acheinavovo.com.br"]').forEach(patchLink);
+  }
+
+  document.addEventListener('DOMContentLoaded', apply);
+  new MutationObserver(apply).observe(document.documentElement, { childList: true, subtree: true });
+
+  // Segurança extra: ajusta o href bem na hora do clique
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.matches('.offer, .cta') || (a.href && a.href.indexOf('pagamento.acheinavovo.com.br') !== -1)) {
+      patchLink(a);
+    }
+  }, true);
+})();
+</script>
+
 </body>
 </html>
