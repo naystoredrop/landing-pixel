@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vídeos Narrados Shopee — Landing</title>
+  <meta name="description" content="Pacote de vídeos narrados prontos para afiliados Shopee. Baixe, poste e venda.">
+  <link rel="preload" as="image" href="1.png">
+  <style>
+    :root{
+      --accent:#22c55e; /* verde CTA */
+      --accent-dark:#16a34a;
+      --text:#111;
+      --bg:#fff;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+    img{display:block; width:100%; height:auto;}
+    main{max-width:var(--maxw); margin:0 auto;}
+    section{width:100%;}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 12px;}
+    /* CTAs */
+    .cta{display:flex; justify-content:center; margin:20px 0;}
+    .cta a{display:inline-block; text-decoration:none; font-weight:800; padding:18px 22px; border-radius:999px; background:var(--accent); color:#fff; box-shadow: 0 6px 16px rgba(0,0,0,.18); transition:.2s transform, .2s background;}
+    .cta a:hover{background:var(--accent-dark); transform: translateY(-1px);}
+    .cta a:active{transform: translateY(0);}
+    .cta small{display:block; font-weight:600; opacity:.8; margin-top:6px; text-align:center;}
+    /* FAQ */
+    .faq{background:#0a0a0a; color:#fff; padding:28px 16px 36px; border-radius:18px; margin:24px 12px;}
+    .faq h2{margin:0 0 12px; font-size: clamp(20px, 3vw, 28px); text-align:center;}
+    details{background:#111; border:1px solid #222; border-radius:12px; padding:14px 16px; margin:10px 0;}
+    summary{cursor:pointer; font-weight:700; outline:none;}
+    details[open]{background:#131313;}
+    details p{margin:10px 0 0 0; line-height:1.55;}
+    /* Footer spacer */
+    .spacer{height:36px;}
+    /* Make images non-selectable */
+    img{-webkit-user-drag:none; user-select:none;}
+    /* Anchor offset if someday you add a sticky header */
+    .anchor{position:relative; top:-10px; visibility:hidden;}
+    /* Make whole image clickable for checkout offers */
+    .offer{display:block;}
+    /* Accessibility */
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;}
+  </style>
+</head>
+<body>
+
+  <!-- ===== Barra Topo (fornecida pelo usuário) ===== -->
+  <div id="e_1313492_1_173967184567b149259e736439016908" class="gpc-e e_html dd dm">
+    <div class="c e_html">
+      <div id="displayDate3" style="color:#fff; font-size: 16px; text-align: center; background: #ff6600; padding: 10px;">
+        Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 10,00</b>
+      </div>
+    </div>
+  </div>
+  <script>
+    function getDatas() {
+      var data = new Date();
+      var dias = [];
+      var mesAtual = data.toLocaleString('pt-BR', { month: 'long' });
+      for (var i = 2; i >= 0; i--) {
+        var novaData = new Date();
+        novaData.setDate(data.getDate() - i);
+        var dia = novaData.getDate();
+        dias.push(dia);
+      }
+      return dias.join(', ') + ' de ' + mesAtual;
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      var el = document.getElementById("datas");
+      if(el){ el.textContent = getDatas(); }
+    });
+  </script>
+  <!-- ===== /Barra Topo ===== -->
+
+  <main>
+    <!-- barra-topo imagem (se existir) -->
+    <section id="barra-topo-img">
+      <img src="barra-topo.png" alt="Banner superior" loading="eager">
+    </section>
+
+    <!-- 1 -->
+    <section id="s1">
+      <span class="anchor" id="a1"></span>
+      <img src="1.png" alt="Seção 1" loading="eager">
+    </section>
+
+    <!-- CTA entre 1 e 2 -> vai para 13 -->
+    <div class="cta">
+      <a href="#s13" aria-label="Ir para o CTA principal: Quero ganhar 5 mil por mês">
+        QUERO GANHAR 5 MIL POR MÊS
+      </a>
+    </div>
+
+    <!-- 2 -->
+    <section id="s2"><img src="2.png" alt="Seção 2"></section>
+    <!-- 3 -->
+    <section id="s3"><img src="3.png" alt="Seção 3"></section>
+    <!-- 4 -->
+    <section id="s4"><img src="4.png" alt="Seção 4"></section>
+    <!-- 5 -->
+    <section id="s5"><img src="5.png" alt="Seção 5"></section>
+    <!-- 6 -->
+    <section id="s6"><img src="6.png" alt="Seção 6"></section>
+    <!-- 7 -->
+    <section id="s7"><img src="7.png" alt="Seção 7"></section>
+
+    <!-- CTA entre 7 e 8 -> vai para 13 -->
+    <div class="cta">
+      <a href="#s13" aria-label="Ir para o CTA: Quero copiar, colar e vender">
+        QUERO COPIAR, COLAR E VENDER
+      </a>
+    </div>
+
+    <!-- 8 -->
+    <section id="s8"><img src="8.png" alt="Seção 8"></section>
+    <!-- 9 -->
+    <section id="s9"><img src="9.png" alt="Seção 9"></section>
+    <!-- 10 -->
+    <section id="s10"><img src="10.png" alt="Seção 10"></section>
+    <!-- 11 -->
+    <section id="s11"><img src="11.png" alt="Seção 11"></section>
+
+    <!-- CTA entre 11 e 12 -> vai para 13 -->
+    <div class="cta">
+      <a href="#s13" aria-label="Ir para o CTA: Quero transformar cliques em PIX">
+        QUERO TRANSFORMAR CLIQUES EM PIX
+      </a>
+    </div>
+
+    <!-- 12 -->
+    <section id="s12"><img src="12.png" alt="Seção 12"></section>
+
+    <!-- 13 (âncora principal) -->
+    <section id="s13"><img src="13.png" alt="Seção 13 — CTA principal"></section>
+
+    <!-- 14 (oferta básica -> checkout) -->
+    <section id="s14">
+      <a class="offer" href="https://pagamento.acheinavovo.com.br/ckt/NeAeBD" target="_blank" rel="noopener nofollow">
+        <span class="sr-only">Ir para checkout da Oferta Básica</span>
+        <img src="14.png" alt="Oferta Básica — Clique para comprar">
+      </a>
+    </section>
+
+    <!-- 15 (oferta premium -> checkout) -->
+    <section id="s15">
+      <a class="offer" href="https://pagamento.acheinavovo.com.br/ckt/qPzPOd" target="_blank" rel="noopener nofollow">
+        <span class="sr-only">Ir para checkout da Oferta Premium</span>
+        <img src="15.png" alt="Oferta Premium — Clique para comprar">
+      </a>
+    </section>
+
+    <!-- 16 -->
+    <section id="s16"><img src="16.png" alt="Seção 16"></section>
+
+    <!-- FAQ entre 16 e 17 -->
+    <section id="faq" class="faq wrap">
+      <h2>PERGUNTAS FREQUENTES</h2>
+      <p style="text-align:center; opacity:.9; margin-top:-2px;">Confira as respostas para as principais dúvidas sobre os Vídeos Narrados da Shopee</p>
+
+      <details>
+        <summary>Sou iniciante, vou conseguir usar os vídeos?</summary>
+        <p>Sim! Os vídeos narrados são totalmente prontos. Basta baixar, postar e começar a vender, mesmo que você nunca tenha vendido antes.</p>
+      </details>
+
+      <details>
+        <summary>Com que frequência vou receber novos vídeos?</summary>
+        <p>Você receberá novos vídeos narrados todos os dias para manter seu perfil sempre atualizado e atrativo para vendas.</p>
+      </details>
+
+      <details>
+        <summary>Preciso editar ou narrar os vídeos?</summary>
+        <p>Não! Os vídeos já vêm narrados e prontos para postagem. Você só precisa baixar e publicar.</p>
+      </details>
+
+      <details>
+        <summary>Os vídeos realmente ajudam a vender?</summary>
+        <p>Sim! Os vídeos são testados e narrados com estratégias de conversão para gerar mais cliques e vendas diariamente.</p>
+      </details>
+
+      <details>
+        <summary>Posso usar os vídeos em qualquer conta?</summary>
+        <p>Sim! Você pode postar os vídeos em qualquer conta de afiliado Shopee, seja no seu perfil pessoal ou em páginas temáticas.</p>
+      </details>
+
+      <details>
+        <summary>Por quanto tempo vou ter acesso aos vídeos?</summary>
+        <p>Você terá acesso contínuo enquanto permanecer assinando o produto.</p>
+      </details>
+
+      <!-- CTA entre FAQ e 17 -> vai para 15 (premium) -->
+      <div class="cta" style="margin-top:18px;">
+        <a href="#s15" aria-label="Ir para a oferta premium">
+          QUERO COMEÇAR AGORA
+        </a>
+        <small>Você será direcionado para as ofertas</small>
+      </div>
+    </section>
+
+    <!-- 17 -->
+    <section id="s17"><img src="17.png" alt="Seção 17"></section>
+
+    <div class="spacer"></div>
+  </main>
+
+</body>
+</html>
