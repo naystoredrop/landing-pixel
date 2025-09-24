@@ -26,20 +26,17 @@
 
   <style>
     :root{
-      --accent:#EE4D2D;
-      --accent-dark:#d63f21;
-      --text:#fff;
-      --bg:#000;
       --maxw:1100px;
+      --bg:#000;
+      --text:#fff;
     }
     *{box-sizing:border-box}
     html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
     img{display:block; width:100%; height:auto; -webkit-user-drag:none; user-select:none;}
     main{max-width:var(--maxw); margin:0 auto;}
     section{width:100%;}
-    .cta{display:flex; justify-content:center; margin:20px 0; padding:0 12px;}
-    .cta a{display:inline-block; text-decoration:none; font-weight:800; padding:18px 22px; border-radius:999px; background:var(--accent); color:#fff; box-shadow: 0 6px 16px rgba(0,0,0,.35); transition:.2s;}
-    .cta a:hover{background:var(--accent-dark); transform:translateY(-1px);}
+    .offer{display:block;}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;}
   </style>
 </head>
 <body>
@@ -50,12 +47,7 @@
       <img src="18.png" alt="Oferta Upgrade Parte 1" loading="eager">
     </section>
 
-    <!-- CTA entre as imagens -->
-    <div class="cta">
-      <a href="#s2" aria-label="Ir para a oferta upgrade">QUERO LIBERAR MEU UPGRADE</a>
-    </div>
-
-    <!-- Imagem 19 -->
+    <!-- Imagem 19 com link de checkout -->
     <section id="s2">
       <a class="offer" href="https://pagamento.acheinavovo.com.br/ckt/LxAwKK" target="_blank" rel="noopener nofollow">
         <span class="sr-only">Ir para checkout do Upgrade Premium</span>
@@ -65,7 +57,7 @@
 
   </main>
 
-  <!-- Script para manter UTMs nos links -->
+  <!-- Script para preservar UTMs -->
   <script>
   (function () {
     const DEFAULT_UTM = new URLSearchParams({
