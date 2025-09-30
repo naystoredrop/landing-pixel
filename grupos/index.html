@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Shopee</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    section {
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .cta a {
+      display: block;
+      background: #EE4D2D;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      padding: 16px 24px;
+      border-radius: 9999px;
+      max-width: 680px;
+      width: 100%;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #d63f21;
+    }
+    .faq-container {
+      background: #0a0a0a;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .faq-container h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    .faq-container h3 {
+      font-size: 1rem;
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    details {
+      margin-bottom: 12px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 8px 0;
+    }
+    p {
+      margin: 6px 0 12px 0;
+      line-height: 1.4;
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '704776715751233');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=704776715751233&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+  <!-- Barra Topo -->
+  <div id="e_1313492_1_173967184567b149259e736439016908" class="gpc-e e_html dd dm">
+    <div class="c e_html">
+      <div id="displayDate3" style="color:#fff; font-size: 16px; text-align: center; background: #ff6600; padding: 10px;">
+        Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 10,00</b>
+      </div>
+    </div>
+  </div>
+  <script>
+    function getDatas() {
+      var data = new Date();
+      var dias = [];
+      var mesAtual = data.toLocaleString('pt-BR', { month: 'long' });
+      for (var i = 2; i >= 0; i--) {
+        var novaData = new Date();
+        novaData.setDate(data.getDate() - i);
+        var dia = novaData.getDate();
+        dias.push(dia);
+      }
+      return dias.join(', ') + ' de ' + mesAtual;
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      var el = document.getElementById("datas");
+      if(el){ el.textContent = getDatas(); }
+    });
+  </script>
+
+  <main>
+    <!-- Seção 1 -->
+    <section id="s1">
+      <img src="1.png" alt="Seção 1" loading="eager">
+    </section>
+
+    <!-- CTA 1 -->
+    <div class="cta">
+      <a href="#s13" aria-label="Quero ganhar 5 mil por mês">QUERO GANHAR 5 MIL POR MÊS</a>
+    </div>
+
+    <!-- Seção 2 a 7 -->
+    <section id="s2"><img src="2.png" alt="Seção 2"></section>
+    <section id="s3"><img src="3.png" alt="Seção 3"></section>
+    <section id="s4"><img src="4.png" alt="Seção 4"></section>
+    <section id="s5"><img src="5.png" alt="Seção 5"></section>
+    <section id="s6"><img src="6.png" alt="Seção 6"></section>
+    <section id="s7"><img src="7.png" alt="Seção 7"></section>
+
+    <!-- CTA 2 -->
+    <div class="cta">
+      <a href="#s13" aria-label="Quero copiar, colar e vender">QUERO COPIAR, COLAR E VENDER</a>
+    </div>
+
+    <!-- Seção 8 a 11 -->
+    <section id="s8"><img src="8.png" alt="Seção 8"></section>
+    <section id="s9"><img src="9.png" alt="Seção 9"></section>
+    <section id="s10"><img src="10.png" alt="Seção 10"></section>
+    <section id="s11"><img src="11.png" alt="Seção 11"></section>
+
+    <!-- CTA 3 -->
+    <div class="cta">
+      <a href="#s13" aria-label="Quero transformar cliques em PIX">QUERO TRANSFORMAR CLIQUES EM PIX</a>
+    </div>
+
+    <!-- Seção 12 a 13 -->
+    <section id="s12"><img src="12.png" alt="Seção 12"></section>
+    <section id="s13"><img src="13.png" alt="Seção 13"></section>
+
+    <!-- Seção 14 com link -->
+    <section id="s14">
+      <a href="https://pagamento.acheinavovo.com.br/ckt/NeAeBD" target="_blank" rel="noopener nofollow">
+        <img src="14.png" alt="Seção 14 - Oferta 1">
+      </a>
+    </section>
+
+    <!-- Seção 15 com link -->
+    <section id="s15">
+      <a href="https://pagamento.acheinavovo.com.br/ckt/qPzPOd" target="_blank" rel="noopener nofollow">
+        <img src="15.png" alt="Seção 15 - Oferta 2">
+      </a>
+    </section>
+
+    <!-- Seção 16 -->
+    <section id="s16"><img src="16.png" alt="Seção 16"></section>
+
+    <!-- FAQ -->
+    <div class="faq-container">
+      <h2>PERGUNTAS FREQUENTES</h2>
+      <h3>Confira as respostas para as principais dúvidas sobre os Vídeos Narrados da Shopee</h3>
+
+      <details>
+        <summary>Sou iniciante, vou conseguir usar os vídeos?</summary>
+        <p>Sim! Os vídeos narrados são totalmente prontos. Basta baixar, postar e começar a vender, mesmo que você nunca tenha vendido antes.</p>
+      </details>
+      <details>
+        <summary>Com que frequência vou receber novos vídeos?</summary>
+        <p>Você receberá novos vídeos narrados todos os dias para manter seu perfil sempre atualizado e atrativo para vendas.</p>
+      </details>
+      <details>
+        <summary>Preciso editar ou narrar os vídeos?</summary>
+        <p>Não! Os vídeos já vêm narrados e prontos para postagem. Você só precisa baixar e publicar.</p>
+      </details>
+      <details>
+        <summary>Os vídeos realmente ajudam a vender?</summary>
+        <p>Sim! Os vídeos são testados e narrados com estratégias de conversão para gerar mais cliques e vendas diariamente.</p>
+      </details>
+      <details>
+        <summary>Posso usar os vídeos em qualquer conta?</summary>
+        <p>Sim! Você pode postar os vídeos em qualquer conta de afiliado Shopee, seja no seu perfil pessoal ou em páginas temáticas.</p>
+      </details>
+      <details>
+        <summary>Por quanto tempo vou ter acesso aos vídeos?</summary>
+        <p>Você terá acesso contínuo enquanto permanecer assinando o produto.</p>
+      </details>
+    </div>
+
+    <!-- CTA 4 (antes do s17) -->
+    <div class="cta">
+      <a href="#s15" aria-label="Quero começar agora">QUERO COMEÇAR AGORA</a>
+    </div>
+
+    <!-- Seção 17 -->
+    <section id="s17"><img src="17.png" alt="Seção 17"></section>
+  </main>
+</body>
+</html>
