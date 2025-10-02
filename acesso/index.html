@@ -3,15 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Página de Acesso</title>
-  <meta name="description" content="Página de acesso exclusiva.">
+  <title>Página de Obrigado</title>
+  <meta name="description" content="Obrigado pela sua compra! Clique abaixo para acessar o grupo.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)n=f.fbq;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '704776715751233'); 
+  fbq('track', 'PageView');
+  fbq('track', 'Purchase', {value: 47.90, currency: 'BRL'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=704776715751233&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     body {
       margin: 0;
       padding: 0;
       background: #000;
-      color: #fff;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,15 +42,15 @@
       max-width: 100%;
       height: auto;
       display: block;
-      border: none;
       cursor: pointer;
+      border: none;
     }
   </style>
 </head>
 <body>
   <main>
     <a href="https://chat.whatsapp.com/KiOn4hNMJpyHLzCS3uxZef?mode=wwc" target="_blank" rel="noopener">
-      <img src="1.gif" alt="Acesso Liberado - Clique para entrar no grupo">
+      <img src="1.gif" alt="Clique aqui para entrar no grupo do WhatsApp">
     </a>
   </main>
 </body>
