@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vídeos Narrados Shopee — Landing</title>
+  <meta name="description" content="Pacote de vídeos narrados prontos para afiliados Shopee. Baixe, poste e venda.">
+  <link rel="preload" as="image" href="1.png">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '704776715751233');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=704776715751233&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    :root{
+      --accent:#EE4D2D; /* laranja Shopee */
+      --accent-dark:#d63f21;
+      --text:#fff;
+      --bg:#000;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;}
+    img{display:block; width:100%; height:auto;}
+    main{max-width:var(--maxw); margin:0 auto;}
+    section{width:100%;}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 12px;}
+    /* CTAs */
+    .cta{display:flex; justify-content:center; margin:20px 0; padding:0 12px;}
+    .cta a{display:inline-block; text-decoration:none; font-weight:800; padding:18px 22px; border-radius:999px; background:var(--accent); color:#fff; box-shadow: 0 6px 16px rgba(0,0,0,.35); transition:.2s transform, .2s background; text-align:center; width:100%; max-width:680px;}
+    .cta a:hover{background:var(--accent-dark); transform: translateY(-1px);} 
+    .cta a:active{transform: translateY(0);} 
+    /* FAQ */
+    .faq{background:#0a0a0a; color:#fff; padding:24px 14px 28px; border-radius:16px; margin:24px auto; width:100%; max-width:var(--maxw);} 
+    .faq h2{margin:6px 0 8px; font-size: clamp(18px, 3.5vw, 28px); text-align:center;} 
+    .faq .sub{opacity:.9; text-align:center; margin:0 0 12px; font-size: clamp(12px, 2.8vw, 16px);} 
+    details{background:#111; border:1px solid #1e1e1e; border-radius:12px; padding:14px 16px; margin:10px 0;} 
+    summary{cursor:pointer; font-weight:700; outline:none; list-style:none;} 
+    details[open]{background:#131313;} 
+    details p{margin:10px 0 0 0; line-height:1.55;} 
+    /* Footer spacer */
+    .spacer{height:36px;} 
+    /* Make images non-selectable */
+    img{-webkit-user-drag:none; user-select:none;} 
+    /* Anchor offset if someday you add a sticky header */
+    .anchor{position:relative; top:-10px; visibility:hidden;} 
+    /* Make whole image clickable for checkout offers */
+    .offer{display:block;} 
+    /* Accessibility */
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;} 
+    /* Mobile tuning */
+    @media (max-width: 480px){
+      .cta a{padding:16px 18px; font-size:15px;} 
+      details{padding:12px 14px;} 
+      details p{font-size:14px;} 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Barra Topo ===== -->
+  <div id="e_1313492_1_173967184567b149259e736439016908" class="gpc-e e_html dd dm">
+    <div class="c e_html">
+      <div id="displayDate3" style="color:#fff; font-size: 16px; text-align: center; background: #ff6600; padding: 10px;">
+        Somente nos dias: <b><span id="datas"></span></b> você vai pagar apenas <b>R$ 47,90</b>
+      </div>
+    </div>
+  </div>
+  <script>
+    function getDatas() {
+      var data = new Date();
+      var dias = [];
+      var mesAtual = data.toLocaleString('pt-BR', { month: 'long' });
+      for (var i = 2; i >= 0; i--) {
+        var novaData = new Date();
+        novaData.setDate(data.getDate() - i);
+        var dia = novaData.getDate();
+        dias.push(dia);
+      }
+      return dias.join(', ') + ' de ' + mesAtual;
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      var el = document.getElementById("datas");
+      if(el){ el.textContent = getDatas(); }
+    });
+  </script>
+  <!-- ===== /Barra Topo ===== -->
+
+  <main>
+
+    <!-- 1 -->
+    <section id="s1"><span class="anchor" id="a1"></span><img src="1.png" alt="Seção 1" loading="eager"></section>
+
+    <div class="cta"><a href="#s13">QUERO GANHAR 5 MIL POR MÊS</a></div>
+
+    <section id="s2"><img src="2.png" alt="Seção 2"></section>
+    <section id="s3"><img src="3.png" alt="Seção 3"></section>
+    <section id="s4"><img src="4.png" alt="Seção 4"></section>
+    <section id="s5"><img src="5.png" alt="Seção 5"></section>
+    <section id="s6"><img src="6.png" alt="Seção 6"></section>
+    <section id="s7"><img src="7.png" alt="Seção 7"></section>
+
+    <!-- CTA movida para baixo da imagem 8.png (antes ficava aqui) -->
+
+    <section id="s8"><img src="8.png" alt="Seção 8"></section>
+
+    <div class="cta"><a href="#s13">QUERO COPIAR, COLAR E VENDER</a></div>
+
+    <section id="s9"><img src="9.png" alt="Seção 9"></section>
+    <section id="s10"><img src="10.png" alt="Seção 10"></section>
+    <section id="s11"><img src="11.png" alt="Seção 11"></section>
+
+    <div class="cta"><a href="#s13">QUERO TRANSFORMAR CLIQUES EM PIX</a></div>
+
+    <section id="s12"><img src="12.png" alt="Seção 12"></section>
+    <section id="s13"><img src="13.png" alt="Seção 13 — CTA principal"></section>
+
+    <!-- 14 REMOVIDO (Oferta Básica) -->
+
+    <!-- 15 (oferta premium -> checkout) -->
+    <section id="s15">
+      <a class="offer" href="https://pagamento.acheinavovo.com.br/ckt/d4wgBq" target="_blank" rel="noopener nofollow">
+        <span class="sr-only">Ir para checkout da Oferta Premium</span>
+        <img src="15.gif" alt="Oferta Premium — Clique para comprar">
+      </a>
+    </section>
+
+    <section id="s16"><img src="16.png" alt="Seção 16"></section>
+
+    <section id="faq" class="faq">
+      <h2>PERGUNTAS FREQUENTES</h2>
+      <p class="sub">Confira as respostas para as principais dúvidas sobre os Vídeos Narrados da Shopee</p>
+
+      <!-- Bloco substituído pelo conteúdo solicitado -->
+      <div class="e-con-inner">
+        <div class="elementor-element elementor-element-26a6aea elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-id="26a6aea" data-element_type="widget" data-widget_type="text-editor.default">
+          <p>PERGUNTAS FREQUENTES:</p>
+        </div>
+        <div class="elementor-element elementor-element-8679530 elementor-widget elementor-widget-n-accordion" data-id="8679530" data-element_type="widget" data-settings='{"default_state":"expanded","max_items_expended":"one","n_accordion_animation_duration":{"unit":"ms","size":400,"sizes":[]}}' data-widget_type="nested-accordion.default">
+          <div class="e-n-accordion" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+
+            <details id="e-n-accordion-item-1410" class="e-n-accordion-item" open>
+              <summary class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0" aria-expanded="true" aria-controls="e-n-accordion-item-1410">
+                <span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> QUAL A FORMA DE PAGAMENTO? </div></span>
+                <span class="e-n-accordion-item-title-icon">
+                  <span class="e-opened">−</span>
+                  <span class="e-closed">+</span>
+                </span>
+              </summary>
+              <div role="region" aria-labelledby="e-n-accordion-item-1410" class="elementor-element elementor-element-d7b9f83 e-con-full e-flex e-con e-child">
+                <div class="elementor-element elementor-element-2af762f elementor-widget elementor-widget-text-editor">
+                  <p><span style="font-weight: 400;">você pode fazer o pagamento por PIX ou CARTÂO DE CRÈDITO</span></p>
+                </div>
+              </div>
+            </details>
+
+            <details id="e-n-accordion-item-1411" class="e-n-accordion-item">
+              <summary class="e-n-accordion-item-title" data-accordion-index="2" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1411">
+                <span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text">  VOU RECEBER UM CURSO OU SEU PRODUTO VALIDADO? </div></span>
+                <span class="e-n-accordion-item-title-icon">
+                  <span class="e-opened">−</span>
+                  <span class="e-closed">+</span>
+                </span>
+              </summary>
+              <div role="region" aria-labelledby="e-n-accordion-item-1411" class="elementor-element elementor-element-5e33701 e-con-full e-flex e-con e-child">
+                <div class="elementor-element elementor-element-7c4148d elementor-widget elementor-widget-text-editor">
+                  <p><span style="font-weight: 400;">Os 2, você vai ter aulas passo a passo de como vender Low Ticket em dólar e ainda receber meu produto, página de vendas e criativos validados para já começar da forma correta</span></p>
+                </div>
+              </div>
+            </details>
+
+            <details id="e-n-accordion-item-1412" class="e-n-accordion-item">
+              <summary class="e-n-accordion-item-title" data-accordion-index="3" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1412">
+                <span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> TEM GARANTIA? </div></span>
+                <span class="e-n-accordion-item-title-icon">
+                  <span class="e-opened">−</span>
+                  <span class="e-closed">+</span>
+                </span>
+              </summary>
+              <div role="region" aria-labelledby="e-n-accordion-item-1412" class="elementor-element elementor-element-eacfacc e-con-full e-flex e-con e-child">
+                <div class="elementor-element elementor-element-9fdfd24 elementor-widget elementor-widget-text-editor">
+                  <p><span style="font-weight: 400;">Sim, o Protocolo Venda em Dólar&nbsp; possui 7 dias de garantia incondicional. Caso você não goste, devolvemos o seu investimento sem burocracia.</span></p>
+                </div>
+              </div>
+            </details>
+
+            <details id="e-n-accordion-item-1413" class="e-n-accordion-item">
+              <summary class="e-n-accordion-item-title" data-accordion-index="4" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1413">
+                <span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Como vou acessar o método? </div></span>
+                <span class="e-n-accordion-item-title-icon">
+                  <span class="e-opened">−</span>
+                  <span class="e-closed">+</span>
+                </span>
+              </summary>
+              <div role="region" aria-labelledby="e-n-accordion-item-1413" class="elementor-element elementor-element-c134693 e-con-full e-flex e-con e-child">
+                <div class="elementor-element elementor-element-765592c elementor-widget elementor-widget-text-editor">
+                  <p><span style="font-weight: 400;">Assim que o seu pagamento for concluído, enviaremos um email com todos os dados de login para você acessar o produto junto com todos os bônus.</span></p>
+                </div>
+              </div>
+            </details>
+
+            <details id="e-n-accordion-item-1414" class="e-n-accordion-item">
+              <summary class="e-n-accordion-item-title" data-accordion-index="5" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1414">
+                <span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Quanto tempo terei acesso? </div></span>
+                <span class="e-n-accordion-item-title-icon">
+                  <span class="e-opened">−</span>
+                  <span class="e-closed">+</span>
+                </span>
+              </summary>
+              <div role="region" aria-labelledby="e-n-accordion-item-1414" class="elementor-element elementor-element-878c9e5 e-con-full e-flex e-con e-child">
+                <div class="elementor-element elementor-element-847c6b0 elementor-widget elementor-widget-text-editor">
+                  <p><span style="font-weight: 400;">O acesso a o Protocolo venda em dolar é válido por 1 ano</span></p>
+                </div>
+              </div>
+            </details>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cta" style="margin-top:18px;"><a href="#s15">QUERO COMEÇAR AGORA</a></div>
+    </section>
+
+    <section id="s17"><img src="17.png" alt="Seção 17"></section>
+
+    <div class="spacer"></div>
+  </main>
+
+  <!-- Script UTMs preservado -->
+  <script>
+  (function () {
+    const DEFAULT_UTM = new URLSearchParams({utm_source:'facebook',utm_medium:'cpc',utm_campaign:'achadinhos'});
+    const incoming = new URLSearchParams(window.location.search);
+    for (const [k,v] of DEFAULT_UTM.entries()) { if (!incoming.has(k)) incoming.set(k,v); }
+    function isCheckout(href){try{const u=new URL(href,window.location.origin);return /(^|\.)pagamento\.acheinavovo\.com\.br$/i.test(u.hostname);}catch{return false;}}
+    function packSrc(urlObj){const existing=urlObj.searchParams.get('src')||'achadinhos';const utmBlock=[incoming.get('utm_source')?'utm_source='+incoming.get('utm_source'):null,incoming.get('utm_medium')?'utm_medium='+incoming.get('utm_medium'):null,incoming.get('utm_campaign')?'utm_campaign='+incoming.get('utm_campaign'):null,incoming.get('utm_content')?'utm_content='+incoming.get('utm_content'):null,].filter(Boolean).join('|');const finalSrc=utmBlock?(existing.includes('utm_source=')||existing.includes('utm_medium=')||existing.includes('utm_campaign=')||existing.includes('utm_content='))?existing:`${existing}|${utmBlock}`:existing;urlObj.searchParams.set('src',finalSrc);}    
+    function buildTarget(href){const u=new URL(href,window.location.origin);for(const [k,v] of incoming.entries()){if(!u.searchParams.has(k))u.searchParams.set(k,v);}packSrc(u);return u.toString();}
+    function patchAllAnchors(){document.querySelectorAll('a[href]').forEach(a=>{if(!isCheckout(a.href))return;a.href=buildTarget(a.href);});}
+    document.addEventListener('click',function(e){const a=e.target.closest('a');if(!a||!isCheckout(a.href))return;const target=buildTarget(a.href);if(a.href===target)return;e.preventDefault();e.stopImmediatePropagation();window.location.assign(target);},true);
+    document.addEventListener('DOMContentLoaded',patchAllAnchors);
+    new MutationObserver(patchAllAnchors).observe(document.documentElement,{childList:true,subtree:true});
+  })();
+  </script>
+</body>
+</html>
